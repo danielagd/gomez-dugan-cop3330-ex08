@@ -9,6 +9,8 @@ public class PizzaParty
 {
     public static void main( String[] args )
     {
+        // Program to figure out how many slices of pizza per person and leftover
+        // at a party
         Scanner input = new Scanner(System.in);
 
         System.out.print("How manny people in your party? ");
@@ -21,10 +23,12 @@ public class PizzaParty
         int num_slices = input.nextInt();
 
         int total_slices = (num_slices * num_pizzas);
+
         System.out.println(num_people + " people with " + num_pizzas + " pizzas (" + total_slices + " slices)");
 
         int slices_per_person = total_slices / num_people;
 
+        // Changing of plural or singular depending on calculation
         if (slices_per_person == 1)
             System.out.println("Each person gets " + slices_per_person + " piece of pizza.");
         else
